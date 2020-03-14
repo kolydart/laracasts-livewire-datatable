@@ -29,7 +29,7 @@ class ContactsTable extends Component
     {
         return view('livewire.contacts-table', [
             'contacts' => \App\Contact::search($this->search)
-                ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
+                // ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
                 ->paginate($this->perPage),
         ]);
     }
